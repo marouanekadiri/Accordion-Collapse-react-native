@@ -1,0 +1,17 @@
+/node_modules
+/coverage
+/build
+
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+.idea
+
+/sample
+/android
+/ios
+index.js
