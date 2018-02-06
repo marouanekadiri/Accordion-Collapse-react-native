@@ -11,20 +11,29 @@ import {
 } from 'react-native';
 
 type Props = {
+    isCollapsed:boolean,
+    onToggle:Function,
 };
+
 export default class Accordion extends Component<Props> {
 
     constructor(props){
         super(props);
         this.state={
-          show:false,
+          show:this.props.isCollapsed,
         };
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            show:nextProps.isCollapsed
+        });
     }
 
     __toggle(){
         this.setState({
            show:!this.state.show
-        });
+        },()=>this.props.onToggle(this.state.show));
     }
 
     render() {
@@ -58,4 +67,9 @@ export default class Accordion extends Component<Props> {
 
     }
 }
+
+Accordion.defaultProps={
+    isCollapsed:true,
+    onToggle:()=>undefined,
+};
 
