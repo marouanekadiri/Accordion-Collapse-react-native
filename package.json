@@ -2,12 +2,22 @@
   "name": "accordion-react-native",
   "version": "0.0.6",
   "main":"index.js",
+  "keywords":["react","react-native","Accordion","Collapse","show","hide","click to show/hide","android","ios"],
   "files": [
     "README.md",
     "index.js",
     "src/",
     "lib/"
   ],
+  "bugs":{
+    "url" : "https://github.com/owner/project/issues",
+    "email" : "marouanekadiri@gmail.com"
+  },
+  "license": "UNLICENSED",
+  "author":{
+    "name" : "Marouane Kadiri"
+  , "email" : "marouanekadiri@gmail.com"
+  },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lib": "babel src/ --out-dir lib --copy-files"
