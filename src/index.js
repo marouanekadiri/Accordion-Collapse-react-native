@@ -1,3 +1,3 @@
-export { default as Accordion } from 'accordionComponent';
-export { default as AccordionHeader } from 'accordionHeader';
-export { default as AccordionBody } from 'accordionBody';
+export { default as Accordion } from './components/Accordion';
+export { default as AccordionHeader } from './components/AccodionHeader';
+export { default as AccordionBody } from './components/AccordionBody';

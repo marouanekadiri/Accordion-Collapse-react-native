@@ -1,6 +1,13 @@
 {
   "name": "accordion-react-native",
-  "version": "0.0.2",
+  "version": "0.0.5",
+  "main":"index.js",
+  "files": [
+    "README.md",
+    "index.js",
+    "src/",
+    "lib/"
+  ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lib": "babel src/ --out-dir lib --copy-files"
