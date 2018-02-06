@@ -1,6 +1,6 @@
 {
   "name": "accordion-react-native",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main":"index.js",
   "keywords":["react","react-native","Accordion","Collapse","show","hide","click to show/hide","android","ios"],
   "files": [
@@ -14,6 +14,10 @@
     "email" : "marouanekadiri@gmail.com"
   },
   "license": "UNLICENSED",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/marouanekadiri/Accordion"
+  },
   "author":{
     "name" : "Marouane Kadiri"
   , "email" : "marouanekadiri@gmail.com"
