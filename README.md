@@ -79,7 +79,7 @@ this is example is based on [native base list separator](https://docs.nativebase
 
 ***Second example***
 
-![](https://user-images.githubusercontent.com/15144618/35877544-80db2fb2-0b6d-11e8-88c3-ecb9bb24ca28.gif)
+![enter image description here](https://user-images.githubusercontent.com/15144618/35877544-80db2fb2-0b6d-11e8-88c3-ecb9bb24ca28.gif)
 
       import { View,Text } from 'react-native';
       import {Accordion, AccordionHeader, AccordionBody} from "accordion-react-native";
@@ -116,3 +116,58 @@ this is example is based on [native base list separator](https://docs.nativebase
           </AccordionBody>
         </Accordion>
       </View>
+
+
+## Components
+
+**AccordionHeader & AccordionBody**
+Think about AccordionHeader and AccordionBody as a View that you can style it as you want. 
+When you touch the header it will show or hide the body. 
+
+**Accordion**
+You need to wrap a AccordionHeader & AccordionBody in the Accordion.
+| Props Name | Default | Type  |   Description |
+|--|--|--|--|
+| isCollapsed | false | boolean | show the AccordionBody if true |
+| onToggle |()=>undefined|Function(isCollapsed:boolean)| onToggle is a function take in input a boolean value that contains the state of the accordion (if collapsed -> true)|
+
+
+In case you want to use and change the state of the accordion in the parent, You can use isCollapsed & onToggle as an input & output to synchronise the parent collapse state & the child (Accordion) state. 
+
+***Example of use***
+   
+   You can control & use the state collapse of the Accordion in you're component as shown down below:
+    
+      import React, { Component } from 'react';
+      import{ View,Text,Button } from 'react-native';
+      import {Accordion, AccordionHeader, AccordionBody} from "accordion-react-native";
+      
+    class Example extends Component<>{ 
+    constructor(props){
+	    super(props);
+	    this.state = {
+	    collapsed:false,//do not show the body by default
+	    }
+    }
+    render(){
+	    return (
+	    <View>
+		    <Button 
+			    title={"Click here too"} 
+			    onPress={()=>this.setState({collapsed:!this.state.collapsed})}
+		    />
+	        <Accordion 
+		        isCollapsed={this.state.collapsed} 
+		        onToggle={(isCollapsed)=>this.setState({collapsed:isCollapsed})}>
+	          <AccordionHeader>
+	            <Text>Click here</Text>
+	          </AccordionHeader>
+	          <AccordionBody>
+	            <Text>WHoooHo!</Text>
+	          </AccordionBody>
+	        </Accordion>
+	      </View>
+	      );
+	      }
+    }
+

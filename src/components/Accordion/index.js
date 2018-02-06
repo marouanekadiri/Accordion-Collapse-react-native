@@ -69,7 +69,7 @@ export default class Accordion extends Component<Props> {
 }
 
 Accordion.defaultProps={
-    isCollapsed:true,
+    isCollapsed:false,
     onToggle:()=>undefined,
 };
 
