@@ -1,6 +1,6 @@
 # accordion-react-native
 
-Accordion is a react javascript component that allow you to collapse a body by clicking on the header.
+Accordion is a react native javascript component that allow you to collapse a body by clicking on the header.
 
 ## Installation
 
