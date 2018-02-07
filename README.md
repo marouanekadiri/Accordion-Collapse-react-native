@@ -126,11 +126,11 @@ When you touch the header it will show or hide the body.
 
 **Accordion**
 You need to wrap a AccordionHeader & AccordionBody in the Accordion.
-| Props Name | Default | Type  |   Description |
-|--|--|--|--|
-| isCollapsed | false | boolean | show the AccordionBody if true |
-| onToggle |()=>undefined|Function(isCollapsed:boolean)| onToggle is a function take in input a boolean value that contains the state of the accordion (if collapsed -> true)|
 
+| Props Name | Default | Type | Description |
+| :--: | :--: | :--: | :------------------------- |
+| isCollapsed | false | boolean | show the AccordionBody if true |
+| onToggle | ()=>undefined | Function(isCollapsed:boolean) | onToggle is a function take in input a boolean value that contains the state of the accordion (if collapsed->true) |
 
 In case you want to use and change the state of the accordion in the parent, You can use isCollapsed & onToggle as an input & output to synchronise the parent collapse state & the child (Accordion) state. 
 
