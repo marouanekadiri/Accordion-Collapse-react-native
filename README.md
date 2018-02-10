@@ -7,11 +7,11 @@ Accordion is a react native javascript component that allow you to collapse a bo
     npm install --save accordion-react-native
     
     
-
 ## Usage
 
-    import {Accordion,AccordionHeader, AccordionBody} from 'accordion-react-native';
-    
+    import {Accordion,AccordionHeader, AccordionBody, AccordionList} from 'accordion-react-native';
+
+    //Simple collapsable
     <Accordion>
 	    <AccordionHeader>
 	      <View>
@@ -22,12 +22,19 @@ Accordion is a react native javascript component that allow you to collapse a bo
 	      <Text>Ta daa!</Text>
 	    </AccordionBody>
 	</Accordion>
-Accordion Components are considered as View , so you can use all the props of the View Component like style.
+    
+    //Accordion List 
+    <AccordionList
+            list={this.state.list}
+            header={this._head}
+            body={this._body}
+          />
 
+Accordion Components are considered as View , so you can use all the props of the View Component like style.
 ## Demo 
 
 
-***First example***
+***Simple Accordion***
 
 ![example in a list](https://user-images.githubusercontent.com/15144618/35876403-135c6954-0b6a-11e8-96c2-681cb1091441.gif)
 
@@ -77,7 +84,7 @@ this is example is based on [native base list separator](https://docs.nativebase
       </View>
 
 
-***Second example***
+***Simple Accordion inception***
 
 ![enter image description here](https://user-images.githubusercontent.com/15144618/35877544-80db2fb2-0b6d-11e8-88c3-ecb9bb24ca28.gif)
 
@@ -116,6 +123,55 @@ this is example is based on [native base list separator](https://docs.nativebase
           </AccordionBody>
         </Accordion>
       </View>
+
+***Accordion List***
+
+
+![enter image description here](https://user-images.githubusercontent.com/15144618/36063134-b473fd26-0e70-11e8-969d-62d79b4acdc4.gif)
+
+    
+    import {AccordionList} from "accordion-react-native";
+    import { Separator } from 'native-base';
+    import { View, Text} from 'react-native';
+    
+    this.state={
+      list:[
+          {
+            title: 'Getting Started',
+            body: 'React native Accordion/Collapse component, very good to use in toggles & show/hide content'
+          },
+          {
+            title: 'Components',
+            body: 'AccordionList,Accordion,AccordionHeader & AccordionBody'
+          }
+          ],
+    }
+    
+    _head(item){
+	    return(
+	        <Separator bordered style={{alignItems:'center'}}>
+	          <Text>{item.title}</Text>
+	        </Separator>
+	    );
+    }
+    
+    _body(item){
+	    return (
+	        <View style={{padding:10}}>
+	          <Text style={{textAlign:'center'}}>{item.body}</Text>
+	        </View>
+	    );
+    }
+    
+    render() {
+	    return (
+	          <AccordionList
+	            list={this.state.list}
+	            header={this._head}
+	            body={this._body}
+	          />
+	    );
+    }
 
 
 ## Components
@@ -171,3 +227,12 @@ In case you want to use and change the state of the accordion in the parent, You
 	      }
     }
 
+**AccordionList**
+
+AccordionList components allow you to show an accordion with list of sections (head&body)
+
+| Props Name | Default | Type | Description |
+| :--: | :--: | :--: | :------------------------- |
+| list | [] | Array | list of items that represents sections |
+| header | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
+| body | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
