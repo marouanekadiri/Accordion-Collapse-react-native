@@ -9,7 +9,7 @@
     
 ## Usage
 
-    import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-react-native';
+    import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 
     //Simple collapsable
     <Collapse>
@@ -43,7 +43,7 @@ Collapse Components are considered as View , so you can use all the props of the
 this is example is based on [native base list separator](https://docs.nativebase.io/Components.html#list-seperator-headref) combined with the Collapse Components.
 
     import {  View,Text } from 'react-native';
-    import { Collapse, CollapseHeader, CollapseBody } from "accordion-react-native";
+    import { Collapse, CollapseHeader, CollapseBody } from "accordion-collapse-react-native";
     import { Thumbnail, List, ListItem, Separator } from 'native-base';
     
     <View>
@@ -93,7 +93,7 @@ this is example is based on [native base list separator](https://docs.nativebase
 ![enter image description here](https://user-images.githubusercontent.com/15144618/35877544-80db2fb2-0b6d-11e8-88c3-ecb9bb24ca28.gif)
 
       import { View,Text } from 'react-native';
-      import {Collapse, CollapseHeader, CollapseBody} from "accordion-react-native";
+      import {Collapse, CollapseHeader, CollapseBody} from "accordion-collapse-react-native";
       import { Thumbnail } from 'native-base';
     
     <View>
@@ -137,7 +137,7 @@ this is example is based on [native base list separator](https://docs.nativebase
 ![enter image description here](https://user-images.githubusercontent.com/15144618/36063134-b473fd26-0e70-11e8-969d-62d79b4acdc4.gif)
 
     
-    import {AccordionList} from "accordion-react-native";
+    import {AccordionList} from "accordion-collapse-react-native";
     import { Separator } from 'native-base';
     import { View, Text} from 'react-native';
     
@@ -203,7 +203,7 @@ In case you want to use and change the state of the Collapse in the parent, You 
     
       import React, { Component } from 'react';
       import{ View,Text,Button } from 'react-native';
-      import {Collapse, CollapseHeader, CollapseBody} from "accordion-react-native";
+      import {Collapse, CollapseHeader, CollapseBody} from "accordion-collapse-react-native";
       
     class Example extends Component<>{ 
     constructor(props){
