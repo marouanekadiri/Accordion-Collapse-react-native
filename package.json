@@ -1,6 +1,6 @@
 {
-  "name": "accordion-react-native",
-  "version": "0.1.2",
+  "name": "accordion-collapse-react-native",
+  "version": "0.0.2",
   "main":"index.js",
   "keywords":["react","react-native","Accordion","Collapse","show","hide","click to show/hide","android","ios"],
   "files": [
@@ -10,13 +10,13 @@
     "lib/"
   ],
   "bugs":{
-    "url" : "https://github.com/owner/project/issues",
+    "url" : "https://github.com/marouanekadiri/Accordion-Collapse-react-native/issues",
     "email" : "marouanekadiri@gmail.com"
   },
   "license": "UNLICENSED",
   "repository" :
   { "type" : "git"
-  , "url" : "https://github.com/marouanekadiri/Accordion"
+  , "url" : "https://github.com/marouanekadiri/Accordion-Collapse-react-native"
   },
   "author":{
     "name" : "Marouane Kadiri"

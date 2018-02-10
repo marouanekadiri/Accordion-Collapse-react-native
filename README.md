@@ -1,10 +1,10 @@
-# accordion-react-native
+# accordion-collapse-react-native
 
  is a react native javascript component that allow you to show an accordion or a collapse.
 
 ## Installation
 
-    npm install --save accordion-react-native
+    npm install --save accordion-collapse-react-native
     
     
 ## Usage
@@ -34,7 +34,9 @@ Collapse Components are considered as View , so you can use all the props of the
 ## Demo 
 
 
+
 ***Simple Collapse***
+
 
 ![example in a list](https://user-images.githubusercontent.com/15144618/35876403-135c6954-0b6a-11e8-96c2-681cb1091441.gif)
 
@@ -84,7 +86,9 @@ this is example is based on [native base list separator](https://docs.nativebase
       </View>
 
 
+
 ***Simple Collapse inception***
+
 
 ![enter image description here](https://user-images.githubusercontent.com/15144618/35877544-80db2fb2-0b6d-11e8-88c3-ecb9bb24ca28.gif)
 
@@ -124,7 +128,10 @@ this is example is based on [native base list separator](https://docs.nativebase
         </Collapse>
       </View>
 
+
+
 ***Accordion List***
+
 
 
 ![enter image description here](https://user-images.githubusercontent.com/15144618/36063134-b473fd26-0e70-11e8-969d-62d79b4acdc4.gif)
@@ -226,6 +233,8 @@ In case you want to use and change the state of the Collapse in the parent, You 
 	      );
 	      }
     }
+
+
 
 **AccordionList**
 
