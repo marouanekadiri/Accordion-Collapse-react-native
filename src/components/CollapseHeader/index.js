@@ -11,7 +11,7 @@ import {
 
 type Props = {
 };
-export default class AccordionHeader extends Component<Props> {
+export default class CollapseHeader extends Component<Props> {
 
     render() {
         return(

@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import {Accordion, AccordionBody, AccordionHeader} from "../../index";
+import {Collapse, CollapseBody, CollapseHeader} from "../../index";
 
 type Props = {
     List:Array,
@@ -37,14 +37,14 @@ export default class AccordionList extends Component<Props> {
     }
 
     _renderItem = ({item,index}) => (
-        <Accordion key={index} isCollapsed={this.state.selectedIndex === index} onToggle={(isCollapsed)=>this.onToggle(index)}>
-            <AccordionHeader>
+        <Collapse key={index} isCollapsed={this.state.selectedIndex === index} onToggle={(isCollapsed)=>this.onToggle(index)}>
+            <CollapseHeader>
                 {this.props.header(item)}
-            </AccordionHeader>
-            <AccordionBody>
+            </CollapseHeader>
+            <CollapseBody>
                 {this.props.body(item)}
-            </AccordionBody>
-        </Accordion>
+            </CollapseBody>
+        </Collapse>
     );
 
     render() {

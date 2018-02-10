@@ -1,4 +1,4 @@
-export { default as Accordion } from './components/Accordion';
-export { default as AccordionHeader } from './components/AccodionHeader';
-export { default as AccordionBody } from './components/AccordionBody';
+export { default as Collapse } from './components/Collapse';
+export { default as CollapseHeader } from './components/CollapseHeader';
+export { default as CollapseBody } from './components/CollapseBody';
 export { default as AccordionList } from './components/AccordionList';

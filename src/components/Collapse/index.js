@@ -15,7 +15,7 @@ type Props = {
     onToggle:Function,
 };
 
-export default class Accordion extends Component<Props> {
+export default class Collapse extends Component<Props> {
 
     constructor(props){
         super(props);
@@ -40,13 +40,13 @@ export default class Accordion extends Component<Props> {
         let header = null;
         let body = null;
         React.Children.forEach(this.props.children,(child)=>{
-            if(child.type.displayName === 'AccordionHeader'){
+            if(child.type.displayName === 'CollapseHeader'){
                 header = (
                     <TouchableOpacity onPress={()=>this.__toggle()}>
                         {child}
                     </TouchableOpacity>
                 );
-            }else if(child.type.displayName === 'AccordionBody'){
+            }else if(child.type.displayName === 'CollapseBody'){
                if(this.state.show){
                    body = child;
                }
@@ -54,7 +54,7 @@ export default class Accordion extends Component<Props> {
         });
 
             if(header === null){
-                console.warn("header wasn't found to be rendered. Please make sure you have wrapped an AccordionHeader in the Accordion Component.");
+                console.warn("header wasn't found to be rendered. Please make sure you have wrapped an CollapseHeader in the Collapse Component.");
                 return null;
             }else{
                 return (
@@ -68,7 +68,7 @@ export default class Accordion extends Component<Props> {
     }
 }
 
-Accordion.defaultProps={
+Collapse.defaultProps={
     isCollapsed:false,
     onToggle:()=>undefined,
 };

@@ -12,7 +12,7 @@ import {
 
 type Props = {
 };
-export default class AccordionBody extends Component<Props> {
+export default class CollapseBody extends Component<Props> {
 
     render(){
         return (
