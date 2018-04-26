@@ -1,6 +1,6 @@
 {
   "name": "accordion-collapse-react-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main":"index.js",
   "keywords":["react","react-native","Accordion","Collapse","show","hide","click to show/hide","android","ios"],
   "files": [
@@ -26,7 +26,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lib": "babel src/ --out-dir lib --copy-files"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "16.2.0",
     "react-native": "0.53.0"
   },
