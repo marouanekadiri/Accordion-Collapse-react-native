@@ -9,6 +9,7 @@ import {
     View,
     TouchableOpacity
 } from 'react-native';
+import { CollapseHeader, CollapseBody } from "../../index";
 
 type Props = {
     isCollapsed:boolean,
@@ -40,13 +41,13 @@ export default class Collapse extends Component<Props> {
         let header = null;
         let body = null;
         React.Children.forEach(this.props.children,(child)=>{
-            if(child.type.name === 'CollapseHeader'){
+            if(child.type === CollapseHeader){
                 header = (
                     <TouchableOpacity onPress={()=>this.__toggle()}>
                         {child}
                     </TouchableOpacity>
                 );
-            }else if(child.type.name === 'CollapseBody'){
+            }else if(child.type === CollapseBody){
                if(this.state.show){
                    body = child;
                }
