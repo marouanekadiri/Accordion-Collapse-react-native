@@ -12,7 +12,6 @@ import {
 type Props = {
 };
 export default class CollapseHeader extends Component<Props> {
-
     render() {
         return(
             <View {...this.props}>

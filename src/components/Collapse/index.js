@@ -40,13 +40,13 @@ export default class Collapse extends Component<Props> {
         let header = null;
         let body = null;
         React.Children.forEach(this.props.children,(child)=>{
-            if(child.type.displayName === 'CollapseHeader'){
+            if(child.type.name === 'CollapseHeader'){
                 header = (
                     <TouchableOpacity onPress={()=>this.__toggle()}>
                         {child}
                     </TouchableOpacity>
                 );
-            }else if(child.type.displayName === 'CollapseBody'){
+            }else if(child.type.name === 'CollapseBody'){
                if(this.state.show){
                    body = child;
                }
