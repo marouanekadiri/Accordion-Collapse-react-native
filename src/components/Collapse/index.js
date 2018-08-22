@@ -12,9 +12,9 @@ import {
 import { CollapseHeader, CollapseBody } from "../../index";
 
 type Props = {
-    isCollapsed:boolean,
-    onToggle:Function,
-    handleLongPress: Function
+    isCollapsed: ?boolean,
+    onToggle: ?Function,
+    handleLongPress: ?Function
 };
 
 export default class Collapse extends Component<Props> {
