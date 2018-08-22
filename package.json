@@ -1,6 +1,6 @@
 {
   "name": "accordion-collapse-react-native",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main":"index.js",
   "keywords":["react","react-native","Accordion","Collapse","show","hide","click to show/hide","android","ios"],
   "files": [
