@@ -14,6 +14,7 @@ import { CollapseHeader, CollapseBody } from "../../index";
 type Props = {
     isCollapsed:boolean,
     onToggle:Function,
+    handleLongPress: Function
 };
 
 export default class Collapse extends Component<Props> {
@@ -71,6 +72,7 @@ export default class Collapse extends Component<Props> {
 }
 
 Collapse.defaultProps={
-    isCollapsed:false,
-    onToggle:()=>undefined,
+    isCollapsed: false,
+    onToggle:() => undefined,
+    handleLongPress: () => undefined
 };
