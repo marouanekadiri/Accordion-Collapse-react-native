@@ -33,7 +33,11 @@ export default class AccordionList extends Component<Props> {
         if(selected === this.state.selectedIndex){
             selected = null;
         }
-        this.setState({selectedIndex:selected});
+        this.setState({selectedIndex:selected}, () => {
+            if (this.props.onToggle) {
+                this.props.onToggle(selected);
+            }
+        });
     }
 
     _renderItem = ({item,index}) => (
