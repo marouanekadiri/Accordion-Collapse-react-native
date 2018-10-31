@@ -1,26 +1,36 @@
 {
   "name": "accordion-collapse-react-native",
-  "version": "0.1.6",
-  "main":"index.js",
-  "keywords":["react","react-native","Accordion","Collapse","show","hide","click to show/hide","android","ios"],
+  "version": "0.1.7",
+  "main": "index.js",
+  "keywords": [
+    "react",
+    "react-native",
+    "Accordion",
+    "Collapse",
+    "show",
+    "hide",
+    "click to show/hide",
+    "android",
+    "ios"
+  ],
   "files": [
     "README.md",
     "index.js",
     "src/",
     "lib/"
   ],
-  "bugs":{
-    "url" : "https://github.com/marouanekadiri/Accordion-Collapse-react-native/issues",
-    "email" : "marouanekadiri@gmail.com"
+  "bugs": {
+    "url": "https://github.com/marouanekadiri/Accordion-Collapse-react-native/issues",
+    "email": "marouanekadiri@gmail.com"
   },
   "license": "UNLICENSED",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/marouanekadiri/Accordion-Collapse-react-native"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marouanekadiri/Accordion-Collapse-react-native"
   },
-  "author":{
-    "name" : "Marouane Kadiri"
-  , "email" : "marouanekadiri@gmail.com"
+  "author": {
+    "name": "Marouane Kadiri",
+    "email": "marouanekadiri@gmail.com"
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
