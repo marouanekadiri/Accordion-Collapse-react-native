@@ -246,3 +246,4 @@ AccordionList components allow you to show an accordion with list of sections (h
 | list | [] | Array | list of items that represents sections |
 | header | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
 | body | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
+| onToggle | (index) => undefined | Function | a function that as input the index of the toggled item |

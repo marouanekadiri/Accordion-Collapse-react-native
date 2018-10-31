@@ -11,6 +11,7 @@ type Props = {
     List:Array,
     header:Function,
     body:Function,
+    onToggle:Function
 };
 export default class AccordionList extends Component<Props> {
 
@@ -62,4 +63,5 @@ AccordionList.defaultProps = {
     List:[],
     header:(item) => undefined,
     body:(item) => undefined,
+    onToggle:(item) => undefined
 };
