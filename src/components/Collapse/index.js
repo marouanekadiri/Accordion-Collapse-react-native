@@ -74,5 +74,5 @@ export default class Collapse extends Component<Props> {
 Collapse.defaultProps={
     isCollapsed: false,
     onToggle:() => undefined,
-    handleLongPress: () => undefined
+    handleLongPress: undefined
 };
