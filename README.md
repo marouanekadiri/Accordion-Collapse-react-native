@@ -193,6 +193,7 @@ You need to wrap a CollapseHeader & a CollapseBody in the Collapse.
 | Props Name | Default | Type | Description |
 | :--: | :--: | :--: | :------------------------- |
 | isCollapsed | false | boolean | show the CollapseBody if true |
+| disabled | false | boolean | disable the click on the collapse header if true |
 | onToggle | ()=>undefined | Function(isCollapsed:boolean) | onToggle is a function take in input a boolean value that contains the state of the Collapse (if collapsed->true) |
 | handleLongPress | undefined | Function() | handles the onLongPress event when longPressing on the collapseHeader content |
 
