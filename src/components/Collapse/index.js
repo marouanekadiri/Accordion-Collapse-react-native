@@ -13,6 +13,7 @@ import { CollapseHeader, CollapseBody } from "../../index";
 
 type Props = {
     isCollapsed: ?boolean,
+    disabled: ?boolean,
     onToggle: ?Function,
     handleLongPress: ?Function
 };
@@ -27,15 +28,15 @@ export default class Collapse extends Component<Props> {
     }
 
     componentWillReceiveProps(nextProps){
-        this.setState({
-            show:nextProps.isCollapsed
-        });
+            this.setState({
+                show:nextProps.isCollapsed
+            });
     }
 
     __toggle(){
         this.setState({
            show:!this.state.show
-        },()=>this.props.onToggle(this.state.show));
+        },() => this.props.onToggle(this.state.show));
     }
 
     render() {
@@ -45,7 +46,7 @@ export default class Collapse extends Component<Props> {
         React.Children.forEach(this.props.children,(child)=>{
             if(child.type === CollapseHeader){
                 header = (
-                    <TouchableOpacity onPress={()=>this.__toggle()} onLongPress={handleLongPressCallback}>
+                    <TouchableOpacity disabled={this.props.disabled} onPress={()=> this.__toggle()} onLongPress={handleLongPressCallback}>
                         {child}
                     </TouchableOpacity>
                 );
@@ -73,6 +74,7 @@ export default class Collapse extends Component<Props> {
 
 Collapse.defaultProps={
     isCollapsed: false,
+    disabled:false,
     onToggle:() => undefined,
     handleLongPress: undefined
 };
