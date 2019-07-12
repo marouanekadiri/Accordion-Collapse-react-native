@@ -5,7 +5,9 @@
  */
 
 import React, { Component } from 'react';
-import {Collapse, CollapseBody, CollapseHeader} from "../../index";
+import Collapse from "../Collapse";
+import CollapseBody from "../CollapseBody";
+import CollapseHeader from "../CollapseHeader";
 
 type Props = {
     List:Array,

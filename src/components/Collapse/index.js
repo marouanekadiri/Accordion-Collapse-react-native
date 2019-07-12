@@ -9,7 +9,8 @@ import {
     View,
     TouchableOpacity
 } from 'react-native';
-import { CollapseHeader, CollapseBody } from "../../index";
+import CollapseHeader from "../CollapseHeader";
+import CollapseBody from "../CollapseBody";
 
 type Props = {
     isCollapsed: ?boolean,
