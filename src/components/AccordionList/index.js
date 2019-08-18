@@ -11,11 +11,12 @@ import CollapseBody from "../CollapseBody";
 import CollapseHeader from "../CollapseHeader";
 
 type Props = {
-    List: Array,
+    list: Array,
     header: Function,
     body: Function,
     onToggle: Function
 };
+
 export default class AccordionList extends Component<Props> {
 
     constructor(props) {
@@ -56,9 +57,12 @@ export default class AccordionList extends Component<Props> {
     );
 
     render() {
+        const { list } = this.props;
+
         return (
             <FlatList
                 {...this.props}
+                data={list}
                 renderItem={this._renderItem}
             />
         )
@@ -66,7 +70,7 @@ export default class AccordionList extends Component<Props> {
 }
 
 AccordionList.defaultProps = {
-    List: [],
+    list: [],
     header: (item) => undefined,
     body: (item) => undefined,
     onToggle: (item) => undefined
