@@ -28,9 +28,9 @@ export default class Collapse extends Component<Props> {
         };
     }
 
-    componentWillReceiveProps(nextProps){
-        if (nextProps.isCollapsed != this.props.isCollapsed) {
-            this.state.show = nextProps.isCollapsed;
+    componentDidUpdate(prevProps){
+        if (prevProps.isCollapsed != this.props.isCollapsed) {
+            this.state.show =  this.props.isCollapsed;
         }
     }
 
