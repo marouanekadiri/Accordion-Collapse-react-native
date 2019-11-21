@@ -26,7 +26,7 @@ export default class AccordionList extends Component<Props> {
         }
     }
 
-    componentWillReceiveProps() {
+    componentDidUpdate(prevProps) {
         this.setState({
             selectedIndex: null,
         });
