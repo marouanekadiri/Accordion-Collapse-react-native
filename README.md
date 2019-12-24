@@ -241,10 +241,11 @@ In case you want to use and change the state of the Collapse in the parent, You 
 **AccordionList**
 
 AccordionList components allow you to show an accordion with list of sections (head&body)
+It's based on FlatList. Which means all the props related to FlatList are supported.
 
 | Props Name | Default | Type | Description |
 | :--: | :--: | :--: | :------------------------- |
-| list | [] | Array | list of items that represents sections |
+| list or data | [] | Array | list of items that represents sections |
 | header | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
 | body | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
-| onToggle | (index) => undefined | Function | a function that as input the index of the toggled item |
+| onToggle | (index|result = keyExtractor(item, index)) => undefined | Function | a function that as input the index or the respective value extracted from the passed keyExtractor of the toggled item |
