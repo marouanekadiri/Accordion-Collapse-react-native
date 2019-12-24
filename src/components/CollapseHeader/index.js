@@ -1,22 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React from 'react';
+import {View} from 'react-native';
 
-import React, { Component } from 'react';
-import {
-    View
-} from 'react-native';
-
-type Props = {
+const CollapseHeader = ({children, ...restProps}) => {
+  return <View {...restProps}>{children}</View>;
 };
-export default class CollapseHeader extends Component<Props> {
-    render() {
-        return(
-            <View {...this.props}>
-                {this.props.children}
-            </View>
-        );
-    }
-}
+
+export default CollapseHeader;
