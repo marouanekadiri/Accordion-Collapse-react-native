@@ -241,6 +241,7 @@ In case you want to use and change the state of the Collapse in the parent, You 
 **AccordionList**
 
 AccordionList components allow you to show an accordion with list of sections (head&body)
+
 It's based on FlatList. Which means all the props related to FlatList are supported.
 
 | Props Name | Default | Type | Description |
