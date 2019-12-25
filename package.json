@@ -14,10 +14,7 @@
     "ios"
   ],
   "files": [
-    "README.md",
-    "index.js",
-    "src/",
-    "lib/"
+    "build/"
   ],
   "bugs": {
     "url": "https://github.com/marouanekadiri/Accordion-Collapse-react-native/issues",
@@ -35,7 +32,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint .",
-    "build": "babel src/ --out-dir build --copy-files --ignore '**/*.test.js'",
+    "build": "babel src/ --out-dir build --ignore '**/*.test.js'",
     "test": "jest"
   },
   "peerDependencies": {
