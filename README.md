@@ -1,4 +1,5 @@
-# accordion-collapse-react-native ![](https://github.com/marouanekadiri/Accordion-Collapse-react-native/workflows/Test/badge.svg) ![](https://github.com/marouanekadiri/Accordion-Collapse-react-native/workflows/Publish/badge.svg)
+![](https://github.com/marouanekadiri/Accordion-Collapse-react-native/workflows/Test/badge.svg) ![](https://github.com/marouanekadiri/Accordion-Collapse-react-native/workflows/Publish/badge.svg) [![npm version](https://badge.fury.io/js/accordion-collapse-react-native.svg)](https://badge.fury.io/js/accordion-collapse-react-native)
+# accordion-collapse-react-native
 
  is a react native javascript component that allow you to show an accordion or a collapse.
 
