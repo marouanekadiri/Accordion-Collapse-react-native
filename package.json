@@ -53,5 +53,8 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "dependencies": {
+    "lodash.get": "4.4.2"
   }
 }
