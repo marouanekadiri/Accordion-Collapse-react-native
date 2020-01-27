@@ -48,11 +48,7 @@ const AccordionList = ({
       renderItem={({item, index}) => {
         return (
           <Collapse
-            isCollapsed={
-              keyExtractor
-                ? keyExtractor(item, index) === selected
-                : index === selected
-            }
+            isCollapsed={_keyExtractor(item, index) === selected}
             onToggle={() => {
               onToggle(_keyExtractor(item, index), index);
               setSelected(_keyExtractor(item, index));
@@ -62,6 +58,7 @@ const AccordionList = ({
           </Collapse>
         );
       }}
+      // Do not provide the internal keyExtractor to keep the default warning of react native FlatList
       keyExtractor={keyExtractor}
       {...restProps}
     />
