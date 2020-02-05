@@ -53,8 +53,8 @@ const AccordionList = ({
               onToggle(_keyExtractor(item, index), index);
               setSelected(_keyExtractor(item, index));
             }}>
-            <CollapseHeader>{header(item)}</CollapseHeader>
-            <CollapseBody>{body(item)}</CollapseBody>
+            <CollapseHeader>{header(item, index)}</CollapseHeader>
+            <CollapseBody>{body(item, index)}</CollapseBody>
           </Collapse>
         );
       }}
