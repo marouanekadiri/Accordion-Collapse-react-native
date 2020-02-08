@@ -248,8 +248,8 @@ It's based on FlatList. Which means all the props related to FlatList are suppor
 | Props Name | Default | Type | Description |
 | :--: | :--: | :--: | :------------------------- |
 | list or data | [] | Array | list of items that represents sections |
-| header | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
-| body | (item)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
+| header | (item, index)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
+| body | (item, index)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
 | onToggle | (keyExtractor(item, index) or index, index) => undefined | Function | a function that as input the index or the respective value extracted from the passed keyExtractor of the toggled item |
 | expandedKey | undefined | Any | The key of the item that should be by default expanded |
 | expandedIndex | undefined | Any | The index of the item that should be by default expanded. If the `expandedKey` prop is defined this will be ignored |
