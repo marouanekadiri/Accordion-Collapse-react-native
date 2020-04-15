@@ -1,8 +1,12 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const CollapseHeader = ({children, ...restProps}) => {
-  return <View {...restProps}>{children}</View>;
-};
+const CollapseHeader = React.forwardRef(({children, ...restProps}, ref) => {
+  return (
+    <View ref={ref} {...restProps}>
+      {children}
+    </View>
+  );
+});
 
 export default CollapseHeader;
