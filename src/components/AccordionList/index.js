@@ -5,6 +5,8 @@ import Collapse from '../Collapse';
 import CollapseBody from '../CollapseBody';
 import CollapseHeader from '../CollapseHeader';
 
+const isNil = element => element == null;
+
 const AccordionList = React.forwardRef(
   (
     {
@@ -26,16 +28,21 @@ const AccordionList = React.forwardRef(
       () => keyExtractor || ((item, index) => index),
       [keyExtractor],
     );
+
     // merged list
     const mergeList = useMemo(() => data || list, [data, list]);
+
     // expanded key extracted from expandedKey or expandedIndex (priority expandedKey if defined)
     const _expandedKey = useMemo(() => {
       const selectedItem = get(mergeList, expandedIndex);
-      return (
-        expandedKey ||
-        (selectedItem && _keyExtractor(selectedItem, expandedIndex)) ||
-        undefined
-      );
+      const expandedKeyViaIndex =
+        selectedItem && _keyExtractor(selectedItem, expandedIndex);
+
+      return isNil(expandedKey)
+        ? isNil(expandedKeyViaIndex)
+          ? undefined
+          : expandedKeyViaIndex
+        : expandedKey;
     }, [mergeList, expandedKey, expandedIndex, _keyExtractor]);
 
     // key of the expanded element
