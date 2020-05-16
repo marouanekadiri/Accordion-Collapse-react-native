@@ -35,8 +35,9 @@ const AccordionList = React.forwardRef(
     // expanded key extracted from expandedKey or expandedIndex (priority expandedKey if defined)
     const _expandedKey = useMemo(() => {
       const selectedItem = get(mergeList, expandedIndex);
-      const expandedKeyViaIndex =
-        selectedItem && _keyExtractor(selectedItem, expandedIndex);
+      const expandedKeyViaIndex = selectedItem
+        ? _keyExtractor(selectedItem, expandedIndex)
+        : undefined;
 
       return isNil(expandedKey)
         ? isNil(expandedKeyViaIndex)
