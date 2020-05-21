@@ -246,7 +246,7 @@ AccordionList components allow you to show an accordion with list of sections (h
 It's based on FlatList. Which means all the props related to FlatList are supported.
 
 | Props Name | Default | Type | Description |
-| :--: | :--: | :--: | :------------------------- |
+| :--: | :----- | :--: | :------------------------- |
 | list or data | [] | Array | list of items that represents sections |
 | header | (item, index, isExpanded)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
 | body | (item, index, isExpanded)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
