@@ -29,6 +29,7 @@
             list={this.state.list}
             header={this._head}
             body={this._body}
+            keyExtractor={item => item.key}
           />
 
 Collapse Components are considered as View , so you can use all the props of the View Component like style.
@@ -145,10 +146,12 @@ this is example is based on [native base list separator](https://docs.nativebase
     this.state={
       list:[
           {
+            id:1,
             title: 'Getting Started',
             body: 'React native Accordion/Collapse component, very good to use in toggles & show/hide content'
           },
           {
+            id:2,
             title: 'Components',
             body: 'AccordionList,Collapse,CollapseHeader & CollapseBody'
           }
@@ -177,6 +180,7 @@ this is example is based on [native base list separator](https://docs.nativebase
 	            list={this.state.list}
 	            header={this._head}
 	            body={this._body}
+              keyExtractor={item => `${item.id}`}
 	          />
 	    );
     }
