@@ -35,15 +35,11 @@ const AccordionList = React.forwardRef(
     // expanded key extracted from expandedKey or expandedIndex (priority expandedKey if defined)
     const _expandedKey = useMemo(() => {
       const selectedItem = get(mergeList, expandedIndex);
-      const expandedKeyViaIndex = selectedItem
+      const expandedKeyViaIndex = !isNil(selectedItem)
         ? _keyExtractor(selectedItem, expandedIndex)
         : undefined;
 
-      return isNil(expandedKey)
-        ? isNil(expandedKeyViaIndex)
-          ? undefined
-          : expandedKeyViaIndex
-        : expandedKey;
+      return !isNil(expandedKey) ? expandedKey : !isNil(expandedKeyViaIndex) ? expandedKeyViaIndex : undefined;
     }, [mergeList, expandedKey, expandedIndex, _keyExtractor]);
 
     // key of the expanded element
@@ -62,7 +58,7 @@ const AccordionList = React.forwardRef(
           const isElementExpanded = _keyExtractor(item, index) === selected;
           return (
             <Collapse
-              isCollapsed={isElementExpanded}
+              isExpanded={isElementExpanded}
               onToggle={isExpanded => {
                 onToggle(_keyExtractor(item, index), index, isExpanded);
                 setSelected(

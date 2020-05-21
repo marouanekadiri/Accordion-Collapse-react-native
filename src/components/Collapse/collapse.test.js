@@ -27,7 +27,7 @@ describe('Collapse', () => {
   });
   it('Should match snapshot while collapsed', () => {
     const renderedComponent = create(
-      <Collapse isCollapsed={true}>
+      <Collapse isExpanded={true}>
         <CollapseHeader>click here</CollapseHeader>
         <CollapseBody>Ta da!</CollapseBody>
       </Collapse>,
