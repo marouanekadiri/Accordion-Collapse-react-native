@@ -180,7 +180,7 @@ this is example is based on [native base list separator](https://docs.nativebase
 	            list={this.state.list}
 	            header={this._head}
 	            body={this._body}
-              keyExtractor={item => `${item.id}`}
+                keyExtractor={item => `${item.id}`}
 	          />
 	    );
     }
