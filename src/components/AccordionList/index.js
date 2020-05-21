@@ -59,15 +59,16 @@ const AccordionList = React.forwardRef(
         ref={ref}
         data={mergeList}
         renderItem={({item, index}) => {
+          const isElementExpanded = _keyExtractor(item, index) === selected
           return (
             <Collapse
-              isCollapsed={_keyExtractor(item, index) === selected}
-              onToggle={() => {
-                onToggle(_keyExtractor(item, index), index);
-                setSelected(_keyExtractor(item, index));
+              isCollapsed={isElementExpanded}
+              onToggle={isExpanded => {
+                onToggle(_keyExtractor(item, index), index, isExpanded);
+                setSelected(isExpanded && _keyExtractor(item, index) || undefined);
               }}>
-              <CollapseHeader>{header(item, index)}</CollapseHeader>
-              <CollapseBody>{body(item, index)}</CollapseBody>
+              <CollapseHeader>{header(item, index, isElementExpanded)}</CollapseHeader>
+              <CollapseBody>{body(item, index, isElementExpanded)}</CollapseBody>
             </Collapse>
           );
         }}
