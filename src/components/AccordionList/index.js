@@ -65,10 +65,12 @@ const AccordionList = React.forwardRef(
             <Collapse
               isCollapsed={isElementExpanded}
               onToggle={isExpanded => {
-                onToggle(_keyExtractor(item, index), index, isExpanded);
+                const newlySelected = _keyExtractor(item, index)
+                onToggle(newlySelected, index, isExpanded);
                 setSelected(
-                  (isExpanded && _keyExtractor(item, index)) || undefined,
+                  (isExpanded && !isNil(newlySelected)) ? newlySelected : undefined,
                 );
+              }}
               disabled={isDisabled(item, index)}>
               <CollapseHeader>
                 {header(item, index, isElementExpanded)}
