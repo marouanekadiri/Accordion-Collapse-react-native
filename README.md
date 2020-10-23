@@ -256,4 +256,5 @@ It's based on FlatList. Which means all the props related to FlatList are suppor
 | body | (item, index, isExpanded)=>undefined | Function | a function that take as input an item of the list and output the render you want in the section header |
 | onToggle | (keyExtractor(item, index) or index, index, isExpanded) => undefined | Function | a function that as input the index or the respective value extracted from the passed keyExtractor of the toggled item |
 | expandedKey | undefined | Any | The key of the item that should be by default expanded |
-| expandedIndex | undefined | Any | The index of the item that should be by default expanded. If the `expandedKey` prop is defined this will be ignored |
+| expandedIndex | undefined | number | The index of the item that should be by default expanded. If the `expandedKey` prop is defined this will be ignored |
+| isDisabled | (item, index) => undefined | (item, index) => boolean | Function that return a boolean indicating if the indicated element is disabled on the accordion |
