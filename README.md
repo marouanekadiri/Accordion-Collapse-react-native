@@ -257,4 +257,4 @@ It's based on FlatList. Which means all the props related to FlatList are suppor
 | onToggle | (keyExtractor(item, index) or index, index, isExpanded) => undefined | Function | a function that as input the index or the respective value extracted from the passed keyExtractor of the toggled item |
 | expandedKey | undefined | Any | The key of the item that should be by default expanded |
 | expandedIndex | undefined | number | The index of the item that should be by default expanded. If the `expandedKey` prop is defined this will be ignored |
-| isDisabled | (item, index) => undefined | (item, index) => boolean | Function that return a boolean indicating if the indicated element is disabled on the accordion |
+| isDisabled | (item, index) => undefined | Function | Function that return a boolean indicating if the indicated element is disabled on the accordion |
