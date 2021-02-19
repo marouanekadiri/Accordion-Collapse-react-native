@@ -197,12 +197,12 @@ You need to wrap a CollapseHeader & a CollapseBody in the Collapse.
 
 | Props Name | Default | Type | Description |
 | :--: | :--: | :--: | :------------------------- |
-| isCollapsed | false | boolean | show the CollapseBody if true |
+| isExpanded | false | boolean | show the CollapseBody if true |
 | disabled | false | boolean | disable the click on the collapse header if true |
-| onToggle | ()=>undefined | Function(isCollapsed:boolean) | onToggle is a function take in input a boolean value that contains the state of the Collapse (if collapsed->true) |
+| onToggle | ()=>undefined | Function(isExpanded:boolean) | onToggle is a function take in input a boolean value that contains the state of the Collapse (if collapsed->true) |
 | handleLongPress | undefined | Function() | handles the onLongPress event when longPressing on the collapseHeader content |
 
-In case you want to use and change the state of the Collapse in the parent, You can use isCollapsed & onToggle as an input & output to synchronise the parent collapse state & the child (Collapse) state. 
+In case you want to use and change the state of the Collapse in the parent, You can use isExpanded & onToggle as an input & output to synchronise the parent collapse state & the child (Collapse) state. 
 
 ***Example of use***
    
@@ -216,7 +216,7 @@ In case you want to use and change the state of the Collapse in the parent, You 
     constructor(props){
 	    super(props);
 	    this.state = {
-	    collapsed:false,//do not show the body by default
+	      expanded: false, //do not show the body by default
 	    }
     }
     render(){
@@ -224,11 +224,11 @@ In case you want to use and change the state of the Collapse in the parent, You 
 	    <View>
 		    <Button 
 			    title={"Click here too"} 
-			    onPress={()=>this.setState({collapsed:!this.state.collapsed})}
+			    onPress={()=>this.setState({expanded: !this.state.expanded})}
 		    />
 	        <Collapse 
-		        isCollapsed={this.state.collapsed} 
-		        onToggle={(isCollapsed)=>this.setState({collapsed:isCollapsed})}>
+		        isExpanded={this.state.expanded} 
+		        onToggle={(isExpanded)=>this.setState({expanded: isExpanded})}>
 	          <CollapseHeader>
 	            <Text>Click here</Text>
 	          </CollapseHeader>
