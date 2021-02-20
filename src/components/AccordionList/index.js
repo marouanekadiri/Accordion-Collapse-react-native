@@ -64,7 +64,7 @@ const AccordionList = React.forwardRef(
           return (
             <Collapse
               isExpanded={isElementExpanded}
-              onToggle={(isExpanded) => {
+              onToggle={isExpanded => {
                 const newlySelected = _keyExtractor(item, index);
                 onToggle(newlySelected, index, isExpanded);
                 setSelected(
