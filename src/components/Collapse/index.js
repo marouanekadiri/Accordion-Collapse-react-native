@@ -10,7 +10,7 @@ import CollapseBody from '../CollapseBody';
 const Collapse = React.forwardRef(
   (
     {
-      isCollapsed = false,
+      isExpanded = false,
       disabled = false,
       onToggle = () => undefined,
       handleLongPress = () => undefined,
@@ -19,10 +19,10 @@ const Collapse = React.forwardRef(
     },
     ref,
   ) => {
-    const [show, setShow] = useState(isCollapsed);
+    const [show, setShow] = useState(isExpanded);
     useEffect(() => {
-      setShow(isCollapsed);
-    }, [isCollapsed]);
+      setShow(isExpanded);
+    }, [isExpanded]);
     let header = null;
     let body = null;
     React.Children.forEach(children, child => {
