@@ -34,7 +34,7 @@
     "lint": "eslint .",
     "build": "babel src/ --out-dir build --ignore '**/*.test.js'",
     "test": "jest"
-  }, 
+  },
   "peerDependencies": {
     "react": ">=16.9.0",
     "react-native": ">=0.61.5"
