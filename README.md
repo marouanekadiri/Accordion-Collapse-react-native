@@ -201,6 +201,7 @@ You need to wrap a CollapseHeader & a CollapseBody in the Collapse.
 | disabled | false | boolean | disable the click on the collapse header if true |
 | onToggle | ()=>undefined | Function(isExpanded:boolean) | onToggle is a function take in input a boolean value that contains the state of the Collapse (if collapsed->true) |
 | handleLongPress | undefined | Function() | handles the onLongPress event when longPressing on the collapseHeader content |
+| touchableOpacityProps | {} | Object | pass additional props to customize TouchableOpacity component
 
 In case you want to use and change the state of the Collapse in the parent, You can use isExpanded & onToggle as an input & output to synchronise the parent collapse state & the child (Collapse) state. 
 

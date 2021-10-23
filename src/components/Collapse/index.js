@@ -14,6 +14,7 @@ const Collapse = React.forwardRef(
       disabled = false,
       onToggle = () => undefined,
       handleLongPress = () => undefined,
+      touchableOpacityProps = {},
       children,
       ...restProps
     },
@@ -41,6 +42,7 @@ const Collapse = React.forwardRef(
       return (
         <View ref={ref} {...restProps}>
           <TouchableOpacity
+            {...touchableOpacityProps}
             disabled={disabled}
             onPress={() => {
               onToggle(!show);
